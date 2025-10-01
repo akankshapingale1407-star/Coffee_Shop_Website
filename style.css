@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Website colors */
+
+:root{
+    --soft-peach: #FBEDE2;
+    --dark-greenish:#122F26;
+    --light-greenish:#1E473A;
+    --orange-yellow:#F1B819;
+    --wooden-brown:#693F04;
+    --white-rock:#EBE7D0;
+    --white-clr:#fff;
+
+}
+
+/* basic styling */
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.green-clr{
+    color: var(--light-greenish);
+}
+
+.peach-clr{
+    color: var(--soft-peach);
+}
+
+.bg-green{
+    background: var(--light-greenish);
+}
+
+.bg-peach{
+    background: var(--soft-peach);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.side-spacing{
+    padding-inline: 6rem;
+}
+
+/* header section */
+
+header{
+    background:var(--light-greenish);
+    height: 13vh;
+}
+
+nav{
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100%;
+    
+}
+.navlist ,.action-list,.social-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.navlist,.action-list{
+    gap: 2.5rem;
+}
+.links{
+    font-size: 1rem;
+    
+}
+
+.nav-btn{
+    background:var(--soft-peach);
+    color: var(--light-greenish);
+    padding: .7rem 1.3rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.fa-bars{
+    color:var(--soft-peach);
+    font-size: 2rem;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+/* hero section */
+
+.hero-section{
+    min-height: 100vh;
+    position: relative;
+}
+h1{
+    font-size: 12rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 9rem;
+    font-family: "Kanit", sans-serif;
+}
+.hero-img{
+    position: absolute;
+    width: 26rem;
+    left: 50%;
+    transform: translate(-50%);
+    top:22%;
+}
+.hero-img::before{
+    content: '';
+    position:absolute;
+    width: 40rem;
+    aspect-ratio: 1;
+    background: linear-gradient(var(--dark-greenish) 50%,var(--white-rock) 50%);
+    border-radius: 50%;
+      top: 50%;
+      left: 50%;
+    transform: translate(-50%,-25%);
+    z-index: -1;
+}
+
+.hero-content, .roasting-content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 9rem;
+}
+
+p{
+    max-width: 450px;
+    text-align: right;
+   
+}
+.icons-link{
+    width: 2.7rem;
+    text-align: center;
+    aspect-ratio: 1;
+    line-height: 2.7rem;
+    border-radius: 50%;
+    color: var(--light-greenish);
+    transition: transform .3s ease-in-out;
+}
+.icons-link:hover{
+    transform: translateY(-20%);
+}
+.social-list{
+    gap: 1rem;
+}
+.fa-brands{
+    font-size: 1.3rem;
+}
+
+.headline{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-block: 1.1rem;
+    background: gold;
+}
+.headline-content{
+    display: inline-block;
+
+}
+
+h4{
+   display: inline-block;  
+   font-size: 2.2rem;
+   color: var(--wooden-brown);
+   text-transform: uppercase;
+   margin-inline: 2rem;
+}
+
+/* Our cofee section */
+
+.working-section{
+    padding-block: 3rem;
+
+}
+
+.img-part{
+    width: 25rem;
+    
+}
+
+h2{
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    text-align: right;
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top:4rem;
+    flex-wrap: wrap;
+        gap: 2rem;
+}
+
+.card{
+    width: 23rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: gold;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.card:nth-child(1){
+    background-image: url(img/latte.jpg);
+}
+
+.card:nth-child(2){
+    background-image: url(img/mocha.jpeg);
+}
+
+.card:nth-child(3){
+    background-image: url(img/affogato.jpg);
+}
+
+.card:nth-child(4){
+    background-image: url(img/capuccino.jpg);
+}
+
+.card:nth-child(5){
+    background-image: url(img/americano.jpg);
+}
+
+.card:nth-child(6){
+    background-image: url(img/flat\ white.jpg);
+}
+
+
+.card:nth-child(7){
+    background-image: url(img/frappe.jpeg);
+}
+
+.card:nth-child(8){
+    background-image: url(img/espresso.jpeg);
+}
+
+.card:nth-child(9){
+    background-image: url(img/capuccino.jpg);
+}
+
+.card::before{
+    content: attr(data-type);
+    position: absolute;
+   
+}
+
+.action-btn {
+    background: var(--orange-yellow);
+    width: 5rem;
+    aspect-ratio: 1;
+    font-size: 3rem;
+    border-radius: 50%;
+    color: var(--light-greenish);
+    display: block;
+    text-align: center;
+    line-height: 5rem;
+
+    
+}
+
+
+/* best cofee section */
+
+.img-con{
+    width: 13rem;
+    height: 6rem;
+    border-radius: 5rem;
+    overflow: hidden;
+}
+
+[data-type='min-padding']{
+    padding-top:2rem;
+
+}
+
+video{
+    border-radius: 2rem;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+
+/* our roasting section */
+
+.start{
+    text-align: left;
+}
+
+.listing{
+    background: var(--dark-greenish);
+    padding: 1rem 1rem 1rem 2rem;
+    margin-top: 2.5rem;
+    border-radius: 5rem;
+    position: relative;
+}
+
+h3{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: "Kanit", sans-serif;
+}
+
+.listing:hover{
+    background: var(--orange-yellow);
+}
+
+.listing:hover h3{
+    color: var(--light-greenish);
+}
+
+.listing:hover .action-btn{
+    background: var(--light-greenish);
+    color: var(--orange-yellow);
+}
+
+.roasting-img{
+    width: 10rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: 20%;
+    transform: translateY(-50%);
+    top: -5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+
+}
+.roasting-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.listing:hover .roasting-img{
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* footer section */
+
+footer{
+padding-block: 2rem;
+
+
+}
+
+h5{
+    color: var(--light-greenish);
+    font-size: 1.2rem;
+
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    flex-basis: 10rem;
+    margin-top: 2rem;
+}
+
+.footer-list{
+    margin-top: 1rem;
+}
+
+.footer-list li{
+    margin-bottom: .6rem;
+}
+
+form{
+    height: 3.5rem;
+    width: 23rem;
+    background-color: gold;
+    border-radius: 5rem;
+    background: var(--white-clr);
+    display: flex;
+    padding: 0.3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type='email']{
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    height: 100%;
+    border-radius: inherit;
+    padding-inline: 1rem;
+    border: none;
+
+}
+
+input[type='submit']{
+    background: var(--light-greenish);
+    border: none;
+    color: var(--soft-peach);
+    font-size: 1rem;
+    border-radius: 5rem;
+    padding: .6rem 1rem;
+}
+
+h6{
+    text-align: center;
+    color: var(--soft-peach);
+  
+}
+
+.created{
+    width: 100%;
+    height: 50px;
+
+      background: var(--light-greenish);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+/* media queries */
+
+@media screen and (max-width:680px){
+    .navlist{
+        flex-direction: column;
+        background: var(--orange-yellow);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 80vh;
+        width: 20rem;
+        z-index: 5;
+        justify-content: center;
+        border-bottom-right-radius: 50%;
+        transform: translateX(-100%);
+        transition: transfrom .5s ease-in-out;
+    }
+    .navlist-active{
+        transform: translateX(0);
+    }
+    .navlist .links{
+        color: var(--light-greenish);
+    }
+    .hamburger{
+        display: block;
+    }
+    .side-spacing{
+        padding-inline: 1rem;
+
+    }
+    h1{
+        font-size: 5.5rem;
+        line-height: 4.7rem;
+    }
+
+    .hero-img{
+        width: 20rem;
+        top:40%
+    }
+    .hero-img::before{
+        width: 30rem;
+    }
+    .hero-content{
+        flex-direction: column;
+        padding-top: 2rem;
+        gap: 1rem;
+       
+    }
+    h2{
+        font-size: 2.9rem;
+    }
+    .img-con, .action-list{
+        display: none;
+    }
+    [data-type="min-padding"]{
+        padding-top: .3rem;
+    }
+
+    h3{
+        font-size: 2.2rem;
+    }
+
+    .roasting-img{
+        width: 7rem;
+        left: 50%;
+    }
+}
